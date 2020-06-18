@@ -39,7 +39,7 @@ function App() {
                 <Rating />
               </div>
 
-              <div className={classes.item}>
+              <div data-test-id="textField" className={classes.item}>
                 <Typography component="legend">
                   Type your thoughts here:
                 </Typography>
