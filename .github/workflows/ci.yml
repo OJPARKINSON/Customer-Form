@@ -13,17 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: npm ci
-      - run: npm test
+      - run: yarn install
+      - run: yarn test
+        
 
-  # Failing tests on purpose
-  failing-tests:
-    name: "Failing tests (on purpose)"
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v1
-      - run: npm ci
-      - uses: ./
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#   # Failing tests on purpose
+#   failing-tests:
+#     name: "Failing tests (on purpose)"
+#     runs-on: ubuntu-latest
+#     continue-on-error: true
+#     steps:
+#       - uses: actions/checkout@v1
+#       - run: npm ci
+#       - uses: ./
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
