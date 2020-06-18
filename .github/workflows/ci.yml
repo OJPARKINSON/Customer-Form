@@ -13,17 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: npm ci
-      - run: npm test
-
-  # Failing tests on purpose
-  failing-tests:
-    name: "Failing tests (on purpose)"
+      - run: yarn install
+      - run: yarn test
+    
+  coverage:
+    name: Jest Annotations & Coverage
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
-      - uses: actions/checkout@v1
-      - run: npm ci
-      - uses: ./
-        env:
+      - uses: mattallty/jest-github-action@v1.0.2
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - with: 
+          test-command: "yarn test"
