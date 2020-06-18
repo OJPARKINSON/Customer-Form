@@ -49,9 +49,13 @@
     -webkit-text-stroke: 1px black;
   }
 
-  input[type="radio"]:not(:hover)+label,
-  input[type="radio"]:hover+label {
+  input[type="radio"]:not(:hover)+label {
     color: yellow;
+    -webkit-text-stroke: 1px black;
+  }
+
+  input[type="radio"]:hover+label {
+    color: yellow !important;
     -webkit-text-stroke: 1px black;
   }
 
