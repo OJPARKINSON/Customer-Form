@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        main {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+        }
+        textarea {
+            padding: 10px;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999;
+        }
+
+        div {
+            padding: 1em;
+            display: block;
+            margin: auto;
+        }
+
+        input[type="submit"] {
+            text-align: center;
+            width: 25%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input[type="radio"]:checked+label{ 
+            color: grey;
+        }
+        #feedback {
+            display: block;
+        }
+    </style>
+  </head>
+  <main>
+    <form>
+        
+    <div id="rating">
+        <label for="rating">What would you rate our service:</label>
+      <input name="ratingInput" class="fa fa-star" id="1" type="radio" value="1"> <label class="fa fa-star" for="1">1</label> </input>
+      <input name="ratingInput" id="2" type="radio" value="2"> <label class="fa fa-star" for="2">2</label> </input>
+      <input name="ratingInput" id="3" type="radio" value="3"> <label class="fa fa-star" for="3">3</label> </input>
+      <input name="ratingInput" id="4" type="radio" value="4"> <label class="fa fa-star" for="4">4</label> </input>
+      <input name="ratingInput" id="5" type="radio" value="5" checked> <label class="fa fa-star" for="5">5</label> </input>
+    </div>
+      <div>
+        <label for="feedback">Type your thoughts here:</label>
+        <textarea id="feedback" rows="4" cols="50"></textarea>
+        
+        <input type="submit" />
+        </div>
+    </form>
+  </main>
+</html>
+
+<!-- 
+    1.1 Shoppers can optionally rate their online shopping experience [functional, must have]
+    1.2 Shoppers can optionally add a comment about their online shopping experience [functional, good to have]
+    1.3 It should be easy for a shopper to leave a rating [non-functional, must have]
+    1.4 It should be easy for a shopper to leave a comment [non-functional, good to have] 
+-->
+
+<!-- <span class="fa fa-star checked"></span> -->
