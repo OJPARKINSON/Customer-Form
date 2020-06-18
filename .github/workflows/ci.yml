@@ -16,12 +16,12 @@ jobs:
       - run: yarn install
       - run: yarn test
     
-  coverage:
-    name: Jest Annotations & Coverage
-    runs-on: ubuntu-latest
-    steps:
-      - uses: mattallty/jest-github-action@v1.0.2
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - with: 
-          test-command: "yarn test"
+#   coverage:
+#     name: Jest Annotations & Coverage
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: mattallty/jest-github-action@v1.0.2
+#       - env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - with: 
+#           test-command: "yarn test"
