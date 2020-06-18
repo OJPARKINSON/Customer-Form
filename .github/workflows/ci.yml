@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - "releases/*"
+      - "*"
 
 jobs:
   # unit tests
@@ -24,4 +24,4 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - with: 
-          test-command: "yarn test"
+          test-command: "yarn test --watchAll"
