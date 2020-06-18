@@ -24,7 +24,6 @@ function App() {
           <div>
             <label for="feedback">Type your thoughts here:</label>
             <textarea id="feedback" rows="4" cols="50"></textarea>
-
             <input type="submit" />
           </div>
         </form>
